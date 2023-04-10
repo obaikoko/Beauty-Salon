@@ -12,7 +12,7 @@ function Gallery() {
 
   
 const loadImages = async () => {
-  const {data} = await axios.get('http://localhost:10000/api/products')
+  const {data} = await axios.get('https://prettyjanesalon.onrender.com/api/products')
   setPhotos(data)
 }
 
