@@ -7,7 +7,7 @@ import Upload from '../imgComponents/Upload';
 function Gallery() {
   const [photos, setPhotos] = useState('')
   const { user } = useSelector((state) => state.auth);
-  const { images } = useSelector((state) => state.Images);
+  // const { images } = useSelector((state) => state.Images);
 
 
   
@@ -20,7 +20,7 @@ const loadImages = async () => {
 useEffect(() => {
 
   loadImages()
-  }, [images]);
+  }, []);
 
   return (
     <div>
