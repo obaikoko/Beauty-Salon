@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
-// import { uploadImageText } from '../../features/services/serviceSlice';
-import { useDispatch } from 'react-redux';
+
+
 
 const Upload = () => {
   const [fileInput, setFileInput] = useState('');
@@ -20,17 +20,15 @@ const Upload = () => {
     setFormData({
       name: '',
       desc: '',
-    })
+    });
     if (!previewSource) return;
     uploadImage(previewSource);
   };
 
   const uploadImage = async (base64EncodedImage) => {
     try {
-      //  const userData = name ;
-      //  dispatch(uploadImageText(name));
       console.log(name);
-      await axios.post('http://localhost:5000/api/products', {
+      await axios.post('https://prettyjanesalon.onrender.com/api/products/', {
         data: base64EncodedImage,
         name: name,
         desc: desc,
@@ -95,7 +93,7 @@ const Upload = () => {
         </form>
       </div>
       <div>
-        <div >
+        <div>
           {previewSource && (
             <img src={previewSource} alt='' className='img-fluid w-md-50' />
           )}

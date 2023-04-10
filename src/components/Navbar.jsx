@@ -12,7 +12,7 @@ const Navbar = () => {
     dispatch(logout());
     dispatch(reset());
     window.location.reload();
-    navigate('/home');
+    // navigate('/home');
   };
   return (
     <div>
