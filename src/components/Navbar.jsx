@@ -10,7 +10,7 @@ const Navbar = () => {
   const onClick = () => {
     dispatch(logout());
     dispatch(reset());
-    window.location.reload();
+    // window.location.reload();
   };
   return (
     <div>
