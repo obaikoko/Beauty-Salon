@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div>
       {/* CAROUSAL */}
-      <section className='mb-2 mt-5'>
+      <section className='mb-1 mt-5 pt-5'>
         <div
           id='carouselExampleInterval'
           className='carousel slide'
@@ -31,7 +31,7 @@ const Home = () => {
             </div>
             <div className='carousel-item'>
               <img
-                src='https://res.cloudinary.com/dzajrh9z7/image/upload/v1681123240/nail10a_cdgzrq.jpg'
+                src='https://res.cloudinary.com/dzajrh9z7/image/upload/v1681207029/nail9a_z3dewc.jpg'
                 className='d-block w-100'
                 alt='...'
               />
@@ -121,37 +121,42 @@ const Home = () => {
         </div>
       </section>
       {/* Cards */}
-      <section className='d-sm-flex justify-content-between mb-2 '>
+      <section className='d-sm-flex justify-content-between mb-1 '>
         <div
-          className=' text-center d-flex justify-content-center align-items-center text-white w-sm-50 m-1'
+          className=' text-center d-flex justify-content-center align-items-center text-white w-sm-50 mt-1'
           style={{ backgroundColor: 'coral' }}
         >
-          <h1>Knothless Braid</h1>
+          <h1>Your Beauty Is Our Priority</h1>
         </div>
         <div className='w-sm-50'>
           <img
             src='https://res.cloudinary.com/dzajrh9z7/image/upload/v1681123402/eyelash1_ertmmz.jpg'
-            className='img-fluid p-1'
+            className='img-fluid '
             alt=''
           />
         </div>
       </section>
-      <section className='d-sm-flex justify-content-between mb-3 '>
+      <section className='d-sm-flex justify-content-between  '>
         <div className='w-sm-50'>
           <img
-            src='https://res.cloudinary.com/dzajrh9z7/image/upload/v1681123446/nail10c_uig1ig.jpg'
-            className='img-fluid p-1'
+            src='https://res.cloudinary.com/dzajrh9z7/image/upload/v1681208338/nails14c_hdq2r3.jpg'
+            className='img-fluid '
             alt=''
           />
         </div>
         <div
-          className=' text-center d-flex justify-content-center align-items-center text-black w-sm-50 m-1'
+          className=' text-center d-flex justify-content-center align-items-center text-white w-sm-50 '
           style={{ backgroundColor: 'coral' }}
         >
-          <h1>Knothless Braid</h1>
+          <h1>Our Goal Is Your Satisfaction</h1>
         </div>
       </section>
 
+      <section className='mb-1'>
+        <div className='d-sm-flex'></div>
+      </section>
+
+      <Newsletter />
       <section>
         <img
           className='img-fluid'
@@ -161,11 +166,6 @@ const Home = () => {
 
         {/* <Accordion /> */}
       </section>
-
-      <section className='mb-1'>
-        <div className='d-sm-flex'></div>
-      </section>
-      <Newsletter />
       <section>
         <Footer />
       </section>

@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
-
-
+import { uploadImage } from '../../features/products/productSlice';
+import { toast } from 'react-toastify';
 
 const Upload = () => {
+  const dispatch = useDispatch();
+  const {isLoading, isSuccess} = useSelector(state => state.products)
   const [fileInput, setFileInput] = useState('');
   const [previewSource, setPreviewSource] = useState('');
   const [formData, setFormData] = useState({
@@ -15,28 +18,20 @@ const Upload = () => {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
-    setPreviewSource('');
-    setFileInput('');
-    setFormData({
-      name: '',
-      desc: '',
-    });
-    if (!previewSource) return;
-    uploadImage(previewSource);
-  };
+    if (!previewSource) {
+      toast('please select an image');
+    } else {
+      const imageInfo = { name, desc, data: previewSource };
+      dispatch(uploadImage(imageInfo));
 
-  const uploadImage = async (base64EncodedImage) => {
-    try {
-      console.log(name);
-      await axios.post('https://prettyjanesalon.onrender.com/api/products/', {
-        data: base64EncodedImage,
-        name: name,
-        desc: desc,
-      });
-    } catch (error) {
-      console.log(error);
+      setPreviewSource('');
+      setFileInput('');
+    }
+    if (isSuccess) {
+      toast(`${name} has been uploaded successfully`)
     }
   };
+
   const handleInputChange = (e) => {
     const file = e.target.files[0];
     setFileInput(e.target.value);

@@ -6,10 +6,7 @@ const Newsletter = () => {
     <div
       className='text-white text-center mb-2'
       style={{
-        backgroundImage: `url(https://res.cloudinary.com/dzajrh9z7/image/upload/v1681122745/carousal-3_f1cthx.png) `,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        height: '40vh',
+        backgroundColor: 'coral'
       }}
     >
       <p className='lead'>SIGN UP FOR OUR </p>
@@ -17,17 +14,17 @@ const Newsletter = () => {
       <span>
         Sign Up To Our VIP List And Get: First For New Products, Exclusive
         Events, Offers & Many More from Us!
-      </span>{' '}
+      </span>
       <br />
       <form className='form'>
         <input
-          className='form-input'
+          className='form-input '
           type='email'
           name='email'
           placeholder='Email'
         />
         <br />
-        <button className='btn btn-block bg-white text-dark mt-2 '>
+        <button className='btn btn-block bg-white text-dark m-2 '>
           SIGN UP
         </button>
       </form>

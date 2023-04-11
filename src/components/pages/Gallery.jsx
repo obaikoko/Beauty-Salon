@@ -1,26 +1,29 @@
 import { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import axios from 'axios';
+import { useSelector, useDispatch } from 'react-redux';
+import { deleteProduct, loadImage } from '../../features/products/productSlice';
+import Spinner from '../Spinner';
+// import axios from 'axios';
 // import { loadImages, reset } from '../../features/services/serviceSlice';
 import Upload from '../imgComponents/Upload';
 
 function Gallery() {
-  const [photos, setPhotos] = useState('')
+  const dispatch = useDispatch();
+  const [photos, setPhotos] = useState('');
   const { user } = useSelector((state) => state.auth);
-  // const { images } = useSelector((state) => state.Images);
+  const { images, isLoading, isSuccess, isError, message } = useSelector(
+    (state) => state.products
+  );
 
+  // console.log(images);
 
-  
-const loadImages = async () => {
-  const {data} = await axios.get('https://prettyjanesalon.onrender.com/api/products')
-  setPhotos(data)
-}
+  useEffect(() => {
+    if (isSuccess) {
+      setPhotos(images);
+    }
+    dispatch(loadImage());
+  }, [isError, isSuccess, message]);
 
-
-useEffect(() => {
-
-  loadImages()
-  }, []);
+  const handleDelete = () => {};
 
   return (
     <div>
@@ -29,17 +32,50 @@ useEffect(() => {
       ) : (
         <div></div>
       )}
+      {isLoading ? (
+        <div className='text-center align-items-center justify-content-center '>
+          <Spinner />
+        </div>
+      ) : (
+        <div className='d-flex flex-column mt-5 pt-5'>
+          {photos ? (
+            <>
+              {photos &&
+                photos.map((photo, index) => (
+                  <div key={index}>
+                    <img
+                      className='img-fluid'
+                      src={photo.url}
+                      alt={photo.name}
+                    />
+                    <div
+                      className='mb-1 text-center'
+                      style={{ backgroundColor: 'rgba(0,0,0,0.3)' }}
+                    >
+                      {user && user.email === 'adminbeautycomplex@gmail.com' ? (
+                        <button
+                          onClick={() => {
+                            dispatch(deleteProduct(photo.Id));
+                          }}
+                        >
+                         {` delete ${photo.name}`}
+                        </button>
+                      ) : (
+                        <></>
+                      )}
+                    </div>
+                  </div>
+                ))}
+            </>
+          ) : (
+            <>
+              <h1>GALLERY IS EMPTY</h1>
+            </>
+          )}
 
-      <div className='d-flex flex-column mt-5 pt-5' >
-        {photos && photos.map((photo, index) => (
-          
-          <div  key={index} ><img className='img-fluid' src={photo.url} alt={photo.name}  />
-          <div className='m-2'><p className='lead'>{photo.name}</p>
-          <span>{photo.desc}</span>
-          </div>
-          </div>
-        ))}
-      </div>
+          {/* */}
+        </div>
+      )}
     </div>
   );
 }

@@ -8,6 +8,7 @@ import Register from './components/pages/Register';
 import Navbar from './components/Navbar';
 import Reservation from './components/pages/Reservation';
 import Gallery from './components/pages/Gallery';
+import Upload from './components/imgComponents/Upload';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/about' element={<BusInfo />} />
           <Route path='/reservation' element={<Reservation />} />
           <Route path='/gallery' element={<Gallery />} />
+          <Route path='/upload' element={<Upload/>} />
         </Routes>
       </Router>
       <ToastContainer />

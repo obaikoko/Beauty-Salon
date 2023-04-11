@@ -1,9 +1,9 @@
 import React from 'react'
-import Map from './Map'
+// import Map from './Map'
 
 const BusInfo = () => {
   return (
-    <div className='container p-5 d-sm-flex  text-white' style={{backgroundColor:'coral'}}>
+    <div className='container p-5 d-sm-flex mt-5  text-white' style={{backgroundColor:'coral'}}>
       <div className='d-sm-flex align-items-center justify-content-center m-4'>
         <section className='about-us m-4'>
           <div className='lead'>About Us</div>
@@ -20,7 +20,7 @@ const BusInfo = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
           doloremque quos nam animi fuga dolorem.
         </section>
-        <Map />
+        {/* <Map /> */}
       </div>
     </div>
   );

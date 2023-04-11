@@ -15,9 +15,6 @@ const Footer = () => {
           <div className='container'>
             <div>
               <div className='d-sm-flex p-5 upper-footer'>
-                <div className='logo p-3'>
-                  <h1 className='m-4'>logo</h1>
-                </div>
                 <div className='d-sm-flex p-4'>
                   <p className='m-4'>
                     <Link className='text-decoration-none text-light'>
