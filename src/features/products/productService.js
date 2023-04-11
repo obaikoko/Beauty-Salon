@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_URL = 'https://prettyjanesalon.onrender.com/api/products';
+const API_URL = 'https://prettyjanesalon.onrender.com/api/products/';
 
 const uploadImage = async (imageInfo) => {
   const response = await axios.post(API_URL + '/upload', imageInfo);

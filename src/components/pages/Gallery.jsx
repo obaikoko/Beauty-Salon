@@ -5,6 +5,7 @@ import Spinner from '../Spinner';
 // import axios from 'axios';
 // import { loadImages, reset } from '../../features/services/serviceSlice';
 import Upload from '../imgComponents/Upload';
+import { toast } from 'react-toastify';
 
 function Gallery() {
   const dispatch = useDispatch();
@@ -56,6 +57,9 @@ function Gallery() {
                         <button
                           onClick={() => {
                             dispatch(deleteProduct(photo.Id));
+                            if (isSuccess) {
+                              toast(`${photo.name} has been deleted successfully`)
+                            }
                           }}
                         >
                          {` delete ${photo.name}`}
