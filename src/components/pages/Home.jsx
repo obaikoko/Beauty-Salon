@@ -122,18 +122,18 @@ const Home = () => {
       </section>
       {/* Cards */}
       <section className='d-sm-flex justify-content-between mb-1 '>
-        <div
-          className=' text-center d-flex justify-content-center align-items-center text-white w-sm-50 mt-1'
-          style={{ backgroundColor: 'coral' }}
-        >
-          <h1>Your Beauty Is Our Priority</h1>
-        </div>
         <div className='w-sm-50'>
           <img
             src='https://res.cloudinary.com/dzajrh9z7/image/upload/v1681123402/eyelash1_ertmmz.jpg'
             className='img-fluid '
             alt=''
           />
+        </div>
+        <div
+          className=' text-center d-flex justify-content-center align-items-center text-white w-sm-50 mt-1'
+          style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
+        >
+          <h1>Your Beauty Is Our Priority</h1>
         </div>
       </section>
       <section className='d-sm-flex justify-content-between  '>
@@ -146,7 +146,7 @@ const Home = () => {
         </div>
         <div
           className=' text-center d-flex justify-content-center align-items-center text-white w-sm-50 '
-          style={{ backgroundColor: 'coral' }}
+          style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}
         >
           <h1>Our Goal Is Your Satisfaction</h1>
         </div>
@@ -160,7 +160,7 @@ const Home = () => {
       <section>
         <img
           className='img-fluid'
-          src='https://res.cloudinary.com/dzajrh9z7/image/upload/v1681123504/carousal-2_favwky.jpg'
+          src='https://res.cloudinary.com/dzajrh9z7/image/upload/v1681243351/shutterstock_1280327281_fesfyd.jpg'
           alt=''
         />
 

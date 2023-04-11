@@ -4,7 +4,7 @@ import React from 'react';
 const Newsletter = () => {
   return (
     <div
-      className='text-white text-center mb-2'
+      className=' text-center mb-2'
       style={{
         backgroundColor: 'coral'
       }}
