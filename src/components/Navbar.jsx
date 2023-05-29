@@ -15,8 +15,8 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className='navbar  navbar-expand-lg bg-body-tertiary fixed-top '
-        style={{ backgroundColor: 'coral' }}
+        className='navbar bg-light  navbar-expand-lg bg-body-tertiary fixed-top '
+       
       >
         <div className='container-fluid'>
           <Link className='navbar-brand' href='#'>

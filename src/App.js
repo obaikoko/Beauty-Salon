@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import Reservation from './components/pages/Reservation';
 import Gallery from './components/pages/Gallery';
 import Upload from './components/imgComponents/Upload';
+import Footer from './components/pages/Footer';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/gallery' element={<Gallery />} />
           <Route path='/upload' element={<Upload/>} />
         </Routes>
+        <Footer/>
       </Router>
       <ToastContainer />
     </>

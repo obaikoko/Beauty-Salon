@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Footer from './Footer';
-// import Accordion from './Accordion';
+import Accordion from './Accordion';
 import Newsletter from './Newsletter';
 
 const Home = () => {
@@ -15,26 +15,27 @@ const Home = () => {
           data-bs-ride='carousel'
         >
           <div className='carousel-inner'>
-            <div className='carousel-item active' data-bs-interval='5000'>
-              <img
-                src='https://res.cloudinary.com/dzajrh9z7/image/upload/v1681123187/braid6_pph0w2.jpg'
-                className='d-block w-100'
-                alt='...'
-              />
-            </div>
-            <div className='carousel-item' data-bs-interval='5000'>
+            <div
+              className='carousel-item d-flex active'
+              data-bs-interval='5000'
+            >
               <img
                 src='https://res.cloudinary.com/dzajrh9z7/image/upload/v1681123301/braid5a_ytgp9q.jpg'
                 className='d-block w-100'
                 alt='...'
               />
+              <div>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque
+                fugiat reprehenderit nulla, totam autem mollitia a quam,
+                doloremque at magnam sequi distinctio dignissimos nam impedit
+                est velit beatae repudiandae. Officiis!
+              </div>
+            </div>
+            <div className='carousel-item' data-bs-interval='5000'>
+              <img src='' className='d-block w-100' alt='...' />
             </div>
             <div className='carousel-item'>
-              <img
-                src='https://res.cloudinary.com/dzajrh9z7/image/upload/v1681207029/nail9a_z3dewc.jpg'
-                className='d-block w-100'
-                alt='...'
-              />
+              <img src='' className='d-block w-100' alt='...' />
             </div>
           </div>
           <button
@@ -67,9 +68,9 @@ const Home = () => {
       <section className='mb-5'>
         <div>
           <div
-            className='text-white align-items-center justify-content-center d-flex '
+            className='text-light bg-dark align-items-center justify-content-center d-flex '
             style={{
-              backgroundColor: 'coral',
+              borderRadius: '2px solid black',
               height: '400px',
               flexDirection: 'column ',
             }}
@@ -120,55 +121,14 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* Cards */}
-      <section className='d-sm-flex justify-content-between mb-1 '>
-        <div className='w-sm-50'>
-          <img
-            src='https://res.cloudinary.com/dzajrh9z7/image/upload/v1681123402/eyelash1_ertmmz.jpg'
-            className='img-fluid '
-            alt=''
-          />
-        </div>
-        <div
-          className=' text-center d-flex justify-content-center align-items-center text-white w-sm-50 mt-1'
-          style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
-        >
-          <h1>Your Beauty Is Our Priority</h1>
-        </div>
-      </section>
-      <section className='d-sm-flex justify-content-between  '>
-        <div className='w-sm-50'>
-          <img
-            src='https://res.cloudinary.com/dzajrh9z7/image/upload/v1681208338/nails14c_hdq2r3.jpg'
-            className='img-fluid '
-            alt=''
-          />
-        </div>
-        <div
-          className=' text-center d-flex justify-content-center align-items-center text-white w-sm-50 '
-          style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}
-        >
-          <h1>Our Goal Is Your Satisfaction</h1>
-        </div>
-      </section>
-
       <section className='mb-1'>
         <div className='d-sm-flex'></div>
       </section>
 
       <Newsletter />
-      <section>
-        <img
-          className='img-fluid'
-          src='https://res.cloudinary.com/dzajrh9z7/image/upload/v1681243351/shutterstock_1280327281_fesfyd.jpg'
-          alt=''
-        />
-
-        {/* <Accordion /> */}
-      </section>
-      <section>
-        <Footer />
-      </section>
+      <>
+        <Accordion />
+      </>
     </div>
   );
 };

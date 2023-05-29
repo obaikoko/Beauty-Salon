@@ -15,7 +15,7 @@ function Gallery() {
     (state) => state.products
   );
 
-  // console.log(images);
+  console.log(images);
 
   useEffect(() => {
     if (isSuccess) {
@@ -24,7 +24,7 @@ function Gallery() {
     dispatch(loadImage());
   }, [isError, isSuccess, message]);
 
-  const handleDelete = () => {};
+  
 
   return (
     <div>
@@ -43,30 +43,9 @@ function Gallery() {
             <>
               {photos &&
                 photos.map((photo, index) => (
-                  <div key={index}>
-                    <img
-                      className='img-fluid'
-                      src={photo.url}
-                      alt={photo.name}
-                    />
-                    <div
-                      className='mb-1 text-center'
-                      style={{ backgroundColor: 'rgba(0,0,0,0.3)' }}
-                    >
-                      {user && user.email === 'adminbeautycomplex@gmail.com' ? (
-                        <button
-                          onClick={() => {
-                            dispatch(deleteProduct(photo.Id));
-                            if (isSuccess) {
-                              toast(`${photo.name} has been deleted successfully`)
-                            }
-                          }}
-                        >
-                         {` delete ${photo.name}`}
-                        </button>
-                      ) : (
-                        <></>
-                      )}
+                  <div className='row'>
+                    <div className='col-md-4'>
+                      <img src={photo.url} className='img-fluid w-100' />
                     </div>
                   </div>
                 ))}
