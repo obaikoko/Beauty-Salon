@@ -15,7 +15,7 @@ function Gallery() {
     (state) => state.products
   );
 
-  console.log(images);
+  // console.log(images);
 
   useEffect(() => {
     if (isSuccess) {
@@ -39,18 +39,13 @@ function Gallery() {
         </div>
       ) : (
         <div className='d-flex flex-column mt-5 pt-5'>
-          {photos ? (
-            <>
-              {photos &&
-                photos.map((photo, index) => (
-                  <div className='row'>
-                    <div className='col-md-4'>
-                      <img src={photo.url} className='img-fluid w-100' />
-                    </div>
-                  </div>
-                ))}
-            </>
-          ) : (
+          {photos ? (<div className='row'>
+          {photos.map(photo => (<div className='col-md-4'>
+            <div className="card">
+              <img src={photo.url} alt={photo.name}  />
+            </div>
+          </div>))}
+          </div>) : (
             <>
               <h1>GALLERY IS EMPTY</h1>
             </>

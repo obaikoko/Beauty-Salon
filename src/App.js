@@ -25,7 +25,7 @@ function App() {
           <Route path='/gallery' element={<Gallery />} />
           <Route path='/upload' element={<Upload/>} />
         </Routes>
-        <Footer/>
+        {/* <Footer/> */}
       </Router>
       <ToastContainer />
     </>
