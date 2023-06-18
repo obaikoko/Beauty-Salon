@@ -21,7 +21,7 @@ const Navbar = () => {
         <div className='container-fluid'>
           <Link className='navbar-brand' href='#'>
             BEAUTY COMPLEX WORLD
-            <h1 className='lead text-white text-uppercase'>{user && `welcome ${user.name}`}</h1>
+            <h1 className='lead text-dark text-uppercase'>{user && `welcome ${user.name}`}</h1>
           </Link>
           <br />
 
@@ -37,7 +37,7 @@ const Navbar = () => {
           </button>
           <div
             className='offcanvas offcanvas-end'
-            tabindex='-1'
+            tabIndex='-1'
             id='offcanvasNavbar'
             aria-labelledby='offcanvasNavbarLabel'
           >
@@ -62,11 +62,6 @@ const Navbar = () => {
                 <li className='nav-item'>
                   <Link to='/reservation' className='nav-link'>
                     MAKE A RESERVATION
-                  </Link>
-                </li>
-                <li className='nav-item'>
-                  <Link to='/about' className='nav-link'>
-                    ABOUT US
                   </Link>
                 </li>
                 <li className='nav-item'>

@@ -14,7 +14,7 @@ const Accordion = () => {
               aria-expanded='false'
               aria-controls='flush-collapseOne'
             >
-              Accordion Item #1
+              What is Gel Polish?
             </button>
           </h2>
           <div
@@ -24,9 +24,10 @@ const Accordion = () => {
             data-bs-parent='#accordionFlushExample'
           >
             <div className='accordion-body'>
-              Placeholder content for this accordion, which is intended to
-              demonstrate the <code>.accordion-flush</code> className. This is the
-              first item's accordion body.
+              Gel polish, also known as soak-off gel polish or UV/LED gel
+              polish, is a type of nail polish that is cured or hardened under a
+              UV or LED lamp. It is a popular choice in nail salons and among
+              individuals who prefer long-lasting and chip-resistant manicures.
             </div>
           </div>
         </div>
@@ -40,7 +41,7 @@ const Accordion = () => {
               aria-expanded='false'
               aria-controls='flush-collapseTwo'
             >
-              Accordion Item #2
+              What are Braids?
             </button>
           </h2>
           <div
@@ -50,10 +51,11 @@ const Accordion = () => {
             data-bs-parent='#accordionFlushExample'
           >
             <div className='accordion-body'>
-              Placeholder content for this accordion, which is intended to
-              demonstrate the <code>.accordion-flush</code> className. This is the
-              second item's accordion body. Let's imagine this being filled with
-              some actual content.
+              Braids are a type of hairstyle created by interweaving three or
+              more strands of hair together. The strands are woven over and
+              under each other in a repetitive pattern to form a unified plaited
+              structure. Braids can be worn by people of all genders and ages
+              and are popular for their versatility and long-lasting nature.
             </div>
           </div>
         </div>
@@ -67,7 +69,7 @@ const Accordion = () => {
               aria-expanded='false'
               aria-controls='flush-collapseThree'
             >
-              Accordion Item #3
+              How long do braids typically last?
             </button>
           </h2>
           <div
@@ -77,12 +79,10 @@ const Accordion = () => {
             data-bs-parent='#accordionFlushExample'
           >
             <div className='accordion-body'>
-              Placeholder content for this accordion, which is intended to
-              demonstrate the <code>.accordion-flush</code> className. This is the
-              third item's accordion body. Nothing more exciting happening here
-              in terms of content, but just filling up the space to make it
-              look, at least at first glance, a bit more representative of how
-              this would look in a real-world application.
+              The duration that braids can last depends on various factors,
+              including the type of braids, hair texture, maintenance routine,
+              and individual hair growth rate. Generally, braids can last
+              anywhere from a few days to several weeks.
             </div>
           </div>
         </div>

@@ -21,6 +21,10 @@ function Gallery() {
     dispatch(loadImage());
   }, [isError, isSuccess, message]);
 
+  const deleteItem = (e) => {
+
+  }
+
   return (
     <div>
       {user && user.email === 'adminbeautycomplex@gmail.com' && <Upload />}
@@ -33,7 +37,7 @@ function Gallery() {
           {photos && photos.length > 0 ? (
             <div className='row row-cols-1 row-cols-md-3 g-4'>
               {photos.map((photo) => (
-                <div key={photo.id} className='col'>
+                <div key={photo.Id} className='col'>
                   <div className='card'>
                     <img
                       src={photo.url}
@@ -41,7 +45,7 @@ function Gallery() {
                       className='card-img-top rounded'
                     />
                   </div>
-                
+                <button className='btn btn-sm btn-light' onClick={() => {dispatch(deleteProduct(photo.Id))}}> delete</button>
                 </div>
               ))}
             </div>
