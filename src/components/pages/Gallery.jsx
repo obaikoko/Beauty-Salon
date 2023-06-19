@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {FaTrash} from 'react-icons/fa'
 import { deleteProduct, loadImage } from '../../features/products/productSlice';
 import Spinner from '../Spinner';
 import Upload from '../imgComponents/Upload';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 
 function Gallery() {
   const dispatch = useDispatch();
@@ -21,9 +20,7 @@ function Gallery() {
     dispatch(loadImage());
   }, [isError, isSuccess, message]);
 
-  const deleteItem = (e) => {
-
-  }
+ 
 
   return (
     <div>
@@ -35,7 +32,7 @@ function Gallery() {
       ) : (
         <div className='container mt-5'>
           {photos && photos.length > 0 ? (
-            <div className='row row-cols-1 row-cols-md-3 g-4'>
+            <div className='row row-cols-1 row-cols-md-4 g-4'>
               {photos.map((photo) => (
                 <div key={photo.Id} className='col'>
                   <div className='card'>
@@ -45,7 +42,17 @@ function Gallery() {
                       className='card-img-top rounded'
                     />
                   </div>
-                <button className='btn btn-sm btn-light' onClick={() => {dispatch(deleteProduct(photo.Id))}}> delete</button>
+
+                  {user && user.email === 'adminbeautycomplex@gmail.com' && (
+                    <button
+                      className='btn btn-sm btn-light'
+                      onClick={() => {
+                        dispatch(deleteProduct(photo.Id));
+                      }}
+                    >
+                      delete
+                    </button>
+                  )}
                 </div>
               ))}
             </div>
